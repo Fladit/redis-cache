@@ -15,7 +15,7 @@ async function startApp() {
     app.listen(port, (err) => {
         if (err) {
             console.log("Error in server setup");
-            if (redisClient.isReady) {
+            if (redisClient?.isReady) {
                 redisClient.disconnect();
             }
 
